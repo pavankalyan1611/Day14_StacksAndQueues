@@ -6,20 +6,28 @@ using System.Threading.Tasks;
 
 namespace Day14_StacksAndQueues
 {
-    internal class stack
+    internal class stack : LinkedListStack
     {
-        LinkedListStack list = new LinkedListStack();
+       
         public stack()
         {
             Console.WriteLine("welcome to Data structures Stack: ");
         }
         public void Push(int value)
         {           
-            list.Add(value);
+            base.Add(value);
         }
         public void Display()
         {
-            list.Display();
+            base.Display();
+        }
+        internal void IsEmpty()
+        {
+            while (base.top != null)
+            {
+                base.Peek();
+                base.Pop();
+            }
         }
     }
 }
