@@ -17,6 +17,10 @@ namespace Day14_StacksAndQueues
         {           
             base.Append(value);
         }
+        public void Dequeue()
+        {
+            base.Remove();
+        }
         public void Display()
         {
             base.Display();

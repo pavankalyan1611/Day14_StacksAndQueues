@@ -8,7 +8,7 @@ namespace Day14_StacksAndQueues
 {
     internal class LinkedListStack
     {
-       protected Node head = null;
+        protected Node head = null;
 
         internal void Append(int data)
         {
@@ -27,21 +27,33 @@ namespace Day14_StacksAndQueues
             }
             Console.WriteLine("{0} inserted into queue ", node.data);
         }
-
-        internal void Display()
+        public void Remove()
         {
-            Node temp = this.head;
-            if (temp == null)
+            if (head == null)
             {
-                Console.WriteLine("Queue is empty");
+                Console.WriteLine("\nQueue is empty, Deletion is not possible");
                 return;
             }
-            while (temp != null)
+            else
             {
-                Console.Write(temp.data + "->");
-                temp = temp.next;
+                Console.WriteLine("\nValue popped is {0} ", this.head.data);
+                head = head.next;
             }
         }
-       
+         internal void Display()
+         {
+                Node temp = this.head;
+                if (temp == null)
+                {
+                    Console.WriteLine("Queue is empty");
+                    return;
+                }
+                while (temp != null)
+                {
+                    Console.Write(temp.data + "->");
+                    temp = temp.next;
+                }
+          }
+
     }
 }
