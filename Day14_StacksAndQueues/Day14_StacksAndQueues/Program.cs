@@ -1,9 +1,8 @@
 ﻿using Day14_StacksAndQueues;
 
-stack stack = new stack();
-stack.Push(70);
-stack.Push(30);
-stack.Push(56);
-stack.Display();
-stack.IsEmpty();
-stack.Display();
+Queue queue= new Queue();
+queue.Enqueu(56);
+queue.Enqueu(30);
+queue.Enqueu(70);
+queue.Display();
+
